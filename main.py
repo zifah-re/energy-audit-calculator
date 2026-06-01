@@ -16,11 +16,11 @@ st.title("Energy Audit Intuition Calculator")
 
 # --- SIDEBAR SLIDERS ---
 st.sidebar.header("Input Parameters")
-v_kmh = st.sidebar.slider("Velocity (km/h)", min_value=60, max_value=100, value=75, step=5)
+v_kmh = st.sidebar.slider("Velocity (km/h)", min_value=60, max_value=100, value=60, step=5)
 cda = st.sidebar.slider("Aerodynamic Drag (CdA)", min_value=0.08, max_value=0.25, value=0.16, step=0.01)
-crr = st.sidebar.slider("Rolling Resistance (Crr)", min_value=0.001, max_value=0.010, value=0.007, step=0.0005, format="%.4f")
+crr = st.sidebar.slider("Rolling Resistance (Crr)", min_value=0.001, max_value=0.015, value=0.007, step=0.0005, format="%.4f")
 mass = st.sidebar.slider("Total Mass including Driver (kg)", min_value=150, max_value=400, value=310, step=10)
-p_peak = st.sidebar.slider("Peak Irradiance (W/m²)", min_value=400, max_value=1200, value=1000, step=50)
+p_peak = st.sidebar.slider("Peak Irradiance (W/m²)", min_value=400, max_value=1200, value=750, step=50)
 
 # --- CONSTANTS & CONFIGURATION ---
 BATTERY_CAPACITY_WH = 3200  # Fixed 3.2 kWh limit
